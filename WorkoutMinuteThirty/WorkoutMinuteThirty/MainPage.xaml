@@ -5,10 +5,10 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="40" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Swoleosis!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Frame>
-            <Label x:Name="lblStopwatch" HorizontalTextAlignment="Center" FontSize="42"></Label>
+            <Label x:Name="lblStopwatch" VerticalTextAlignment="Center" TextColor="Black" HorizontalTextAlignment="Center" FontSize="46"></Label>
         </Frame>
         <Button x:Name="btnStart" Clicked="btnStart_Clicked" Text="Start"></Button>
         <Button x:Name="btnStop" Clicked="btnStop_Clicked" Text="Stop"></Button>
