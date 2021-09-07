@@ -13,17 +13,21 @@
         <Button x:Name="btnStart" Clicked="btnStart_Clicked" Text="Start"></Button>
         <Button x:Name="btnStop" Clicked="btnStop_Clicked" Text="Stop"></Button>
         <Button x:Name="btnReset" Clicked="btnReset_Clicked" Text="Reset"></Button>
+        <Frame BackgroundColor="#2196F3">
+            <Label FontSize="36" HorizontalTextAlignment="Center" TextColor="White">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Current Set Number: "/>
+                            <Span x:Name="lblWorkoutSetNumber" FontSize="36" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Frame>
+        <Button x:Name="btnResetSetNumber" Clicked="btnResetSetNumber_Clicked"  Text="Reset Set Number"></Button>
         <Label Text="Time to get swole." FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <!--<Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>-->
-        </Label>
+        
     </StackLayout>
 
 </ContentPage>
