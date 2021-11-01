@@ -1,7 +1,7 @@
 # WorkoutMinuteThirty
 Simple Workout Stopwatch
 
-##To Do:
+## To Do:
 * Add a list of workouts to the dropdown menu on the stats sheet.
 * Add ability to add custom workouts to the dropdown
 * Add ability to add rows to the grid
