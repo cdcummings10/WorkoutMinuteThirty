@@ -21,7 +21,7 @@ namespace WorkoutMinuteThirty
             InitializeComponent();
             stopwatch = new Stopwatch();
             lblStopwatch.Text = "00:00:00.00";
-            CurrentSetNumber = 0;
+            CurrentSetNumber = 1;
             lblWorkoutSetNumber.Text = CurrentSetNumber.ToString();
 
             //This sends an alert popup to the phone
@@ -44,7 +44,10 @@ namespace WorkoutMinuteThirty
         /// <param name="e"></param>
         private void btnStart_Clicked(object sender, EventArgs e)
         {
-            CurrentSetNumber++;
+            if (stopwatch.IsRunning == false)
+            {
+                CurrentSetNumber++;
+            }
             lblWorkoutSetNumber.Text = CurrentSetNumber.ToString();
             stopwatch.Start();
             Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
@@ -57,7 +60,7 @@ namespace WorkoutMinuteThirty
                 {
                     SendNotification();
                 }
-                if(ts.Hours == 0 && ts.Minutes == 3 && ts.Seconds == 0)
+                if (ts.Hours == 0 && ts.Minutes == 3 && ts.Seconds == 0)
                 {
                     SendNotification();
                 }
@@ -110,8 +113,11 @@ namespace WorkoutMinuteThirty
         /// <param name="e"></param>
         private void btnResetSetNumber_Clicked(object sender, EventArgs e)
         {
-            CurrentSetNumber = 0;
-            lblWorkoutSetNumber.Text = CurrentSetNumber.ToString();
+            if (stopwatch.IsRunning == false)
+            {
+                CurrentSetNumber = 1;
+                lblWorkoutSetNumber.Text = CurrentSetNumber.ToString();
+            }
         }
     }
 }
