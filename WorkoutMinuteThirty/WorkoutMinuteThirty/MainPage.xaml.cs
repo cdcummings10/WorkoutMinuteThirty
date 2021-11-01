@@ -119,5 +119,9 @@ namespace WorkoutMinuteThirty
                 lblWorkoutSetNumber.Text = CurrentSetNumber.ToString();
             }
         }
+        private void btnStats_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new StatsPage();
+        }
     }
 }

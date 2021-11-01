@@ -5,7 +5,7 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="40" CornerRadius="0">
-            <Label Text="Swoleosis!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="MinuteThirty Workout!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Frame>
             <Label x:Name="lblStopwatch" VerticalTextAlignment="Center" TextColor="Black" HorizontalTextAlignment="Center" FontSize="46"></Label>
@@ -62,7 +62,17 @@
                     HeightRequest="100"
                     Text="Reset Set Number"></Button>
         </Grid>
-        
+        <Grid
+            ColumnDefinitions="33.33*, 33.33*, 33.33*"
+            ColumnSpacing="8" 
+            HorizontalOptions="FillAndExpand">
+            <Button x:Name="btnStats" 
+                    Clicked="btnStats_Clicked"
+                    Grid.Column="1"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    Text="Stats"></Button>
+        </Grid>
         <Label Text="Time to get swole." FontSize="16" Padding="30,0,30,0"/>
 
     </StackLayout>
